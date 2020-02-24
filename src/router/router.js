@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '../components/Login'
 import Home from '../components/Home'
+import WelCome from '../components/Welcome.vue'
+import Users from '../components/user/Users'
 
 Vue.use(Router)
 
@@ -17,7 +19,14 @@ const routes = [
   },
   {
     path: '/home',
-    component: Home
+    component: Home,
+    // 重定向到welcome组件
+    redirect: '/welcome',
+    // 子组件路由 ，配置好，与页面中菜单的router属性，配合使用即可
+    children: [
+      { path: '/welcome', component: WelCome },
+      { path: '/users', component: Users }
+    ]
   }
 ]
 
