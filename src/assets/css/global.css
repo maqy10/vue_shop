@@ -4,6 +4,7 @@ html,body,#app{
     height: 100%;
     margin: 0;
     padding: 0;
+    min-width: 1366px; /*页面宽度不够时，会强制达到该宽度，产生底部滚动条*/
 }
 
 .el-breadcrumb {
