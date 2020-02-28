@@ -90,9 +90,9 @@
           <!-- options 用来指定数据源 -->
           <!-- props 用来指定配置对象 -->
           <el-cascader
+            v-model="selectedKeys"
             :options="parentCateList"
             :props="cascaderProps"
-            v-model="selectedKeys"
             @change="parentCateChanged"
             clearable
           ></el-cascader>
@@ -175,7 +175,9 @@ export default {
         label: 'cat_name',
         // 父子嵌套的属性
         children: 'children',
-        checkStrictly: 'true'
+        // 使用此属性，可选中任意一级，否则只写选中最后一级，
+        // 但是加上此属性之后，文本前会有一个单选按钮
+        checkStrictly: true
       },
       // 选中的父级分类的Id数组
       selectedKeys: []
