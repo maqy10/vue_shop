@@ -17,7 +17,10 @@ import {
   Select, Option,
   Cascader,
   Alert,
-  Tabs, TabPane
+  Tabs, TabPane,
+  Steps, Step,
+  CheckboxGroup, Checkbox,
+  Upload
 } from 'element-ui'
 
 // 组件注册为全局组件
@@ -51,6 +54,11 @@ Vue.use(Cascader)
 Vue.use(Alert)
 Vue.use(Tabs)
 Vue.use(TabPane)
+Vue.use(Steps)
+Vue.use(Step)
+Vue.use(CheckboxGroup)
+Vue.use(Checkbox)
+Vue.use(Upload)
 // 弹框提示组件,挂载到vue,vue提供了$message方法，所以挂载就可以
 Vue.prototype.$message = Message
 // 挂载MessageBox

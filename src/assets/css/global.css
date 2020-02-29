@@ -1,10 +1,13 @@
 /* 全局样式表 不需要在组件中引入，打包编译时，会自动进行处理*/
+
 /* 使用element组件，标签名就是类名，直接使用即可 */
-html,body,#app{
+
+html, body, #app {
     height: 100%;
     margin: 0;
     padding: 0;
-    min-width: 1366px; /*页面宽度不够时，会强制达到该宽度，产生底部滚动条*/
+    min-width: 1366px;
+    /*页面宽度不够时，会强制达到该宽度，产生底部滚动条*/
 }
 
 .el-breadcrumb {
@@ -12,9 +15,9 @@ html,body,#app{
     font-size: 12px;
 }
 
-.el-card{
+.el-card {
     /* 无效果，可能是其本身权重较高，加 !important 将其权重变为最高即可 */
-    box-shadow: 0 1px 1px rgba(0,0,0,0.15) !important;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15) !important;
 }
 
 .el-table {
@@ -22,6 +25,22 @@ html,body,#app{
     font-size: 12px;
 }
 
-.el-pagination{
+.el-pagination {
     margin-top: 15px;
+}
+
+.el-alert {
+    margin-bottom: 15px;
+}
+
+.el-step__title {
+    font-size: 13px;
+}
+
+.el-tabs {
+    margin-top: 15px;
+}
+
+.ql-editor {
+    min-height: 300px;
 }
