@@ -153,7 +153,7 @@ export default {
       // 静态属性列表数据
       onlyTableData: [],
       // 上传图片的URL地址
-      uploadURL: 'https://www.liulongbin.top:8888/api/private/v1/',
+      uploadURL: 'https://www.liulongbin.top:8888/api/private/v1/upload',
       // 图片上传组件的headers请求头对象
       headerObj: {
         Authorization: window.sessionStorage.getItem('token')
@@ -284,14 +284,13 @@ export default {
 
         // 发起请求添加商品
         // 商品的名称，必须是唯一的
-        // 显示创建基本信息失败，这是源码，应该是服务端的问题吧，此处先就这样，应该没有错
         const { data: res } = await this.$http.post('goods', form)
 
         if (res.meta.status !== 201) {
-          return this.$message.error(res.data.msg)
+          return this.$message.error('添加商品失败')
         }
 
-        this.$message.success(res.data.msg)
+        this.$message.success('添加商品成功')
         this.$router.push('/goods')
       })
     }

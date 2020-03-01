@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import Timeline from './timeline/index.js'
+import TimelineItem from './timeline-item/index.js'
 import {
   Button, Form, FormItem, Input, Message,
   Container, Header, Aside, Main,
@@ -59,6 +61,8 @@ Vue.use(Step)
 Vue.use(CheckboxGroup)
 Vue.use(Checkbox)
 Vue.use(Upload)
+Vue.use(Timeline)
+Vue.use(TimelineItem)
 // 弹框提示组件,挂载到vue,vue提供了$message方法，所以挂载就可以
 Vue.prototype.$message = Message
 // 挂载MessageBox

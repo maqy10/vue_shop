@@ -44,3 +44,9 @@ html, body, #app {
 .ql-editor {
     min-height: 300px;
 }
+
+/* 修改级联选择框显示高度 */
+
+.el-cascader-panel {
+    height: 200px;
+}
